@@ -2,7 +2,7 @@
 
 TASK 1.2: CREATE A DYNAMODB TABLE
 
-aws dynamodb create-table \
+` aws dynamodb create-table \
   --table-name GridBuilder \
   --attribute-definitions \
       AttributeName=uniqueGridId,AttributeType=S \
@@ -11,7 +11,7 @@ aws dynamodb create-table \
       AttributeName=uniqueGridId,KeyType=HASH \
       AttributeName=s3Key,KeyType=RANGE \
   --provisioned-throughput \
-      ReadCapacityUnits=5,WriteCapacityUnits=5
+      ReadCapacityUnits=5,WriteCapacityUnits=5 `
 
 To create a compressed .zip deployment package of the application and its dependencies, run the following command:
 
